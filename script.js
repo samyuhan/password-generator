@@ -19,7 +19,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Function to generate password given user inputs
@@ -27,8 +26,18 @@ function generatePassword() {
   // Create empty variables to store the possible password combinations and the resulting randomly generated password string
   var passwordCombos = [];
   var generatedPassword = "";
-  // Ask user for desired length of password and convert to integer
-  var len = parseInt(prompt("How long would you like your password to be (between 8 to 128 characters)?"));
+
+  // Add a do while loop to make sure user inputs length between 8 and 128
+  do {
+    // Ask user for desired length of password and convert to integer
+    var len = parseInt(prompt("How long would you like your password to be (between 8 and 128 characters)?"));
+    
+    // Check if len is not within the criteria, otherwise an alert will show
+    if(len < 8 || len > 128) {
+      alert("Please input a number between 8 and 128.")
+    }
+  } while (len < 8 || len > 128);
+  
   // Add a do while loop to make sure at least one criteria is confirmed at the end
   do {
     // Ask user to confirm if they want these certain criteria
@@ -60,6 +69,10 @@ function generatePassword() {
   for(var i = 0; i < len; i++) {
     generatedPassword += passwordCombos[Math.floor(Math.random() * passwordCombos.length)];
   }
+
+  // Create an alert for the generated password
+  alert("Generated Password: " + generatedPassword);
+
   // Returns the randomly generated password that was created
   return generatedPassword;
 }
