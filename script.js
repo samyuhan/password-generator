@@ -45,7 +45,11 @@ function generatePassword() {
     var useUppercase = confirm("Confirm if you want uppercase characters in your password.");
     var useNumeric = confirm("Confirm if you want numeric characters in your password.");
     var useSpecialChar = confirm("Confirm if you want special characters in your password.");
-    alert("If you didn't choose at least one criteria, you will be prompted to confirm again.")
+    
+    // Check if at least one criteria is chosen
+    if (!useLowercase && !useUppercase && !useNumeric && !useSpecialChar) {
+      alert("Please choose at least one criteria.");
+    }
   } while (!useLowercase && !useUppercase && !useNumeric && !useSpecialChar)
   
   // Checks to see if lowercase was confirmed, then it'll add it to the password combinations list
