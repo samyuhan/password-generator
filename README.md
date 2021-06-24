@@ -32,5 +32,6 @@ for(var i = 0; i < len; i++) {
 ```
 
 ## Application Functioning
+![demo walkthrough](demo.gif)
 
-The final website can be found here: [Password Generator]()
+The final website can be found here: [Password Generator](https://samyuhan.github.io/password-generator/)
