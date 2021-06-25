@@ -20,7 +20,8 @@ do {
 The confirm() function was used so that the user can select which criteria they wished to include in their generated password.
 ```html
 var useLowercase = confirm("Confirm if you want lowercase characters in your password.");
-var useUppercase = confirm("Confirm if you want uppercase characters in your password.");    var useNumeric = confirm("Confirm if you want numeric characters in your password.");
+var useUppercase = confirm("Confirm if you want uppercase characters in your password.");  
+var useNumeric = confirm("Confirm if you want numeric characters in your password.");
 var useSpecialChar = confirm("Confirm if you want special characters in your password.");
 ```
 
